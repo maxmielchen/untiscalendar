@@ -7,6 +7,8 @@
 <br>
 
 ![Build Docker Image](https://img.shields.io/github/actions/workflow/status/VelocityPackage/UntisGoogle/docker-image.yml?style=flat-square)
+![Publish Docker Image](https://img.shields.io/github/actions/workflow/status/VelocityPackage/UntisGoogle/docker-publish.yml?label=publish&style=flat-square)
+
 
 
 # UntisGoogle
