@@ -13,4 +13,4 @@
 ![Downloads](https://img.shields.io/github/downloads/VelocityPackage/UntisGoogle/total?style=flat-square)
 
 # UntisGoogle
-UntisGoogle is a software written in Python that synchronizes your timetable with your Google calendar.
+UntisGoogle is a software written in Java that synchronizes your WebUntis timetable with your Google calendar.
