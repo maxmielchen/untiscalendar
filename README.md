@@ -12,5 +12,10 @@
 ![Publish Docker Image](https://img.shields.io/github/actions/workflow/status/VelocityPackage/UntisGoogle/docker-publish.yml?label=publish&style=flat-square)
 ![Downloads](https://img.shields.io/github/downloads/VelocityPackage/UntisGoogle/total?style=flat-square)
 
+# Roadmap
+
+> **Warning**
+> This project is currently still in the development phase and there is no usable version!
+
 # UntisGoogle
 UntisGoogle is a software written in Java that synchronizes your WebUntis timetable with your Google calendar.
