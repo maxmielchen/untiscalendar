@@ -1,11 +1,3 @@
-<br>
-
-<p align="center">
-    <img width="200" src="https://avatars.githubusercontent.com/u/109356998?s=200" alt="VelocityPackage">
-</p>
-
-<br>
-
 ![](https://img.shields.io/github/license/maxmielchen/UntisCalender?style=flat-square)
 ![](https://img.shields.io/github/repo-size/maxmielchen/UntisCalender?style=flat-square)
 ![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalender/docker-image.yml?style=flat-square)
