@@ -6,10 +6,10 @@
 
 <br>
 
-![License](https://img.shields.io/github/license/maxmielchen/UntisCalender?style=flat-square)
-![Repository Size](https://img.shields.io/github/repo-size/maxmielchen/UntisCalender?style=flat-square)
-![Build Docker Image](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalender/docker-image.yml?style=flat-square)
-![Publish Docker Image](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalender/docker-publish.yml?label=publish&style=flat-square)
+![](https://img.shields.io/github/license/maxmielchen/UntisCalender?style=flat-square)
+![](https://img.shields.io/github/repo-size/maxmielchen/UntisCalender?style=flat-square)
+![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalender/docker-image.yml?style=flat-square)
+![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalender/docker-publish.yml?label=publish&style=flat-square)
 ![Downloads](https://img.shields.io/github/downloads/maxmielchen/UntisCalender/total?style=flat-square)
 
 # Roadmap
