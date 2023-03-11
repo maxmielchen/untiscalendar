@@ -1,11 +1,11 @@
-![](https://img.shields.io/github/license/maxmielchen/UntisCalender?style=flat-square)
-![](https://img.shields.io/github/repo-size/maxmielchen/UntisCalender?style=flat-square)
-![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalender/docker-image.yml?style=flat-square)
-![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalender/docker-publish.yml?label=publish&style=flat-square)
-![Downloads](https://img.shields.io/github/downloads/maxmielchen/UntisCalender/total?style=flat-square)
+![](https://img.shields.io/github/license/maxmielchen/UntisCalendar?style=flat-square)
+![](https://img.shields.io/github/repo-size/maxmielchen/UntisCalendar?style=flat-square)
+![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalendar/docker-image.yml?style=flat-square)
+![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalendar/docker-publish.yml?label=publish&style=flat-square)
+![Downloads](https://img.shields.io/github/downloads/maxmielchen/UntisCalendar/total?style=flat-square)
 
 ## UntisCalender
-UntisCalender is a software written in Java that host's your Timetable via iCal.
+UntisCalendar is a software written in Java that host's your Timetable via iCal.
 
 ## Usage
 
@@ -31,7 +31,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 Create instance
 ```Bash
-docker pull ghcr.io/maxmielchen/untiscalender:main
+docker pull ghcr.io/maxmielchen/untiscalendar:latest
 docker run \
     -e TIMEZONE="Germany/Berlin" \
     -e ROOM=Room \
@@ -43,7 +43,7 @@ docker run \
     -e SCHOOL=your_school \
     -e TOKEN=secret \
     -p 80:8080 \
-    ghcr.io/maxmielchen/untiscalender:main
+    ghcr.io/maxmielchen/untiscalendar:latest
 ```
 
 iCal Link
