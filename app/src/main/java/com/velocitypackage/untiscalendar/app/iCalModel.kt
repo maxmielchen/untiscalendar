@@ -1,4 +1,4 @@
-package com.velocitypackage.untiscalender.app
+package com.velocitypackage.untiscalendar.app
 
 import net.fortuna.ical4j.model.*
 import net.fortuna.ical4j.model.component.VEvent

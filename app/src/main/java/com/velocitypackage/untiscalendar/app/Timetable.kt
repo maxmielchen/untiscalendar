@@ -1,4 +1,4 @@
-package com.velocitypackage.untiscalender.app
+package com.velocitypackage.untiscalendar.app
 
 import org.bytedream.untis4j.Session
 import org.bytedream.untis4j.responseObjects.Timetable

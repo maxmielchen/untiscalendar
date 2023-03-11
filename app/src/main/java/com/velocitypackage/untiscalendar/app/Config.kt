@@ -1,4 +1,4 @@
-package com.velocitypackage.untiscalender.app
+package com.velocitypackage.untiscalendar.app
 
 object Config
 {

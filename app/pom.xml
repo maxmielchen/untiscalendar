@@ -147,7 +147,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.velocitypackage.untiscalender.app.AppKt</mainClass>
+                                    <mainClass>com.velocitypackage.untiscalendar.app.AppKt</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
