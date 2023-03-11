@@ -31,12 +31,12 @@ fun Timetable.getCalender() : Calendar
         val event = VEvent(
             DateTime(
                 Date.from(
-                    lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameLocal(ZoneId.of("UTC")).toInstant()
+                    lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameInstant(ZoneOffset.UTC).toInstant()
                 )
             ),
             DateTime(
                 Date.from(
-                    lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameLocal(ZoneId.of("UTC")).toInstant()
+                    lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameInstant(ZoneOffset.UTC).toInstant()
                 )
             ),
             name
