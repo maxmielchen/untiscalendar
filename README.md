@@ -47,10 +47,11 @@ docker run \
 
 iCal Link
 ```http
-https://host:port/by/secret_key
+https://host:port/ical?token=secret
 ```
 
 ## Roadmap
+> 1.0.2 Fix token bug
 
 > 1.0.1 Save version, with some security settings and env variables
 
