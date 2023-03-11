@@ -2,6 +2,7 @@ package com.velocitypackage.untiscalender.app
 
 object Config
 {
+    var timezone : String = System.getenv("TIMEZONE")
     var defaultRoomAlias : String = System.getenv("ROOM")
     var defaultTeacherAlias : String = System.getenv("TEACHER")
     var defaultSummary : String = System.getenv("SUMMARY")
