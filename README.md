@@ -33,14 +33,14 @@ Create instance
 ```Bash
 docker pull ghcr.io/maxmielchen/untiscalender:main
 docker run \
-    -e ROOM="Room" \
-    -e TEACHER="Teacher" \
-    -e SUMMARY="School" \
-    -e USERNAME=" ...your username" \
-    -e PASSWORD=" ...your password" \
-    -e SERVER="niobe.webuntis.com" \
-    -e SCHOOL=" ...your school" \
-    -e TOKEN=" ...some secret key" \
+    -e ROOM=Room \
+    -e TEACHER=Teacher \
+    -e SUMMARY=School \
+    -e USERNAME=your_username \
+    -e PASSWORD=your_password \
+    -e SERVER=niobe.webuntis.com \
+    -e SCHOOL=your_school \
+    -e TOKEN=secret \
     -p 80:8080 \
     ghcr.io/maxmielchen/untiscalender:main
 ```
