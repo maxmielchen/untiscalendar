@@ -52,6 +52,8 @@ https://host:port/ical?token=secret
 ```
 
 ## Roadmap
+> 1.0.5 Rename
+
 > 1.0.4 Set Europe/Berlin as default Timezone
 
 > 1.0.3 Add option to change Timezone
