@@ -9,6 +9,7 @@ import net.fortuna.ical4j.model.property.Version
 import org.bytedream.untis4j.UntisUtils
 import org.bytedream.untis4j.responseObjects.Timetable
 import java.time.ZoneId
+import java.time.ZoneOffset
 
 
 var timezone : TimeZone = TimeZoneRegistryFactory.getInstance().createRegistry().getTimeZone(Config.timezone)
@@ -19,7 +20,6 @@ fun Timetable.getCalender() : Calendar
     calendar.properties.add(ProdId("-//VelocityPackage//UntisCalender 1.0//EN"))
     calendar.properties.add(Version.VERSION_2_0)
     calendar.properties.add(CalScale.GREGORIAN)
-    calendar.properties.add(timezone.vTimeZone.timeZoneId)
     for (lesson in this)
     {
         if (lesson.code == UntisUtils.LessonCode.CANCELLED) continue
@@ -29,8 +29,16 @@ fun Timetable.getCalender() : Calendar
             name = lesson.subjects.longNames[0]
         } catch (_ : Exception) { }
         val event = VEvent(
-            DateTime(Date.from(lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
-            DateTime(Date.from(lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
+            DateTime(
+                Date.from(
+                    lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameLocal(ZoneId.of("UTC")).toInstant()
+                )
+            ),
+            DateTime(
+                Date.from(
+                    lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameLocal(ZoneId.of("UTC")).toInstant()
+                )
+            ),
             name
         )
         try
