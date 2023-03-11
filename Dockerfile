@@ -16,5 +16,5 @@ ENV TOKEN="secret"
 
 COPY --from=builder /app/target/app-jar-with-dependencies.jar /
 EXPOSE 8080
-CMD ["java", "-jar", "app-jar-with-dependencies.jar", "$ROOM", "$TEACHER", "$SUMMARY", "$USERNAME", "$USERNAME", "$PASSWORD", "$SERVER", "$SCHOOL", "$SSL", "$TOKEN"]
+CMD java -jar app-jar-with-dependencies.jar
 
