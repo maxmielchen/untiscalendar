@@ -27,8 +27,5 @@ fun Application.module()
             )
             return@get call.respond(HttpStatusCode.OK, getUserSpecificTable().getCalender().toString())
         }
-        get("/debug") {
-            return@get call.respond(HttpStatusCode.OK, Config.token)
-        }
     }
 }
