@@ -47,7 +47,7 @@ docker run \
 
 iCal Link
 ```http
-https://host:post/by/secret
+https://host:port/by/secret_key
 ```
 
 ## Roadmap
