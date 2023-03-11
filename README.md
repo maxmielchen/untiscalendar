@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalendar/docker-publish.yml?label=publish&style=flat-square)
 ![Downloads](https://img.shields.io/github/downloads/maxmielchen/UntisCalendar/total?style=flat-square)
 
-## UntisCalender
+## UntisCalendar
 UntisCalendar is a software written in Java that host's your Timetable via iCal.
 
 ## Usage
