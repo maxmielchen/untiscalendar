@@ -7,14 +7,14 @@ FROM amazoncorretto:17-alpine
 ENV ROOM="Room"
 ENV TEACHER="Teacher"
 ENV SUMMARY="School"
-ENV USERNAME=""
-ENV PASSWORD=""
+ENV USERNAME="null"
+ENV PASSWORD="null"
 ENV SERVER="niobe.webuntis.com"
-ENV SCHOOL=""
+ENV SCHOOL="null"
 ENV SSL="true"
 ENV TOKEN="secret"
 
 COPY --from=builder /app/target/app-jar-with-dependencies.jar /
 EXPOSE 8080
-CMD java -jar app-jar-with-dependencies.jar $ROOM $TEACHER $SUMMARY $USERNAME $USERNAME $PASSWORD $SERVER $SCHOOL $SSL $TOKEN
+CMD ["java", "-jar", "app-jar-with-dependencies.jar", "$ROOM", "$TEACHER", "$SUMMARY", "$USERNAME", "$USERNAME", "$PASSWORD", "$SERVER", "$SCHOOL", "$SSL", "$TOKEN"]
 
