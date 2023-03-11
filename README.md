@@ -52,6 +52,8 @@ https://host:port/ical?token=secret
 ```
 
 ## Roadmap
+> 1.0.8 Set Timezone priority
+
 > 1.0.7 Fix security issues
 
 > 1.0.6 Rename
