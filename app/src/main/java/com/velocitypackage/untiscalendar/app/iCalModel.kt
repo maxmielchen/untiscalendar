@@ -19,6 +19,7 @@ fun Timetable.getCalender() : Calendar
     calendar.properties.add(ProdId("-//VelocityPackage//UntisCalender 1.0//EN"))
     calendar.properties.add(Version.VERSION_2_0)
     calendar.properties.add(CalScale.GREGORIAN)
+    calendar.properties.add(timezone.vTimeZone.timeZoneId)
     for (lesson in this)
     {
         if (lesson.code == UntisUtils.LessonCode.CANCELLED) continue
@@ -36,7 +37,6 @@ fun Timetable.getCalender() : Calendar
         {
             event.properties.add(Description("${Config.defaultRoomAlias}: ${lesson.rooms[0].longName} \n${Config.defaultTeacherAlias}: ${lesson.teachers[0].fullName}"))
         } catch (_ : Exception) { }
-        event.properties.add(timezone.vTimeZone.timeZoneId)
         calendar.components.add(
             event
         )
