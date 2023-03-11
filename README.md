@@ -33,6 +33,7 @@ Create instance
 ```Bash
 docker pull ghcr.io/maxmielchen/untiscalender:main
 docker run \
+    -e TIMEZONE="Germany/Berlin" \
     -e ROOM=Room \
     -e TEACHER=Teacher \
     -e SUMMARY=School \
@@ -51,6 +52,8 @@ https://host:port/ical?token=secret
 ```
 
 ## Roadmap
+> 1.0.3 Add option to change Timezone
+
 > 1.0.2 Fix token bug
 
 > 1.0.1 Save version, with some security settings and env variables
