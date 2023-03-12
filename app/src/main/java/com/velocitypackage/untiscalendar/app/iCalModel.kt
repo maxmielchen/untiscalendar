@@ -33,7 +33,7 @@ fun Timetable.getCalender() : Calendar
                 lesson.startTime.atDate(lesson.date).toString()
             ),
             DateTime(
-                lesson.startTime.atDate(lesson.date).toString()
+                lesson.endTime.atDate(lesson.date).toString()
             ),
             name
         )
