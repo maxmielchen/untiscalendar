@@ -28,10 +28,10 @@ fun Timetable.getCalender() : Calendar
         } catch (_ : Exception) { }
         val event = VEvent(
             DateTime(
-                Date.from(lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())
+                Date.from(lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toLocalDateTime().toInstant(ZoneOffset.UTC))
             ),
             DateTime(
-                Date.from(lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())
+                Date.from(lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toLocalDateTime().toInstant(ZoneOffset.UTC))
             ),
             name
         )
