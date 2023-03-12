@@ -4,6 +4,8 @@ import net.fortuna.ical4j.model.*
 import net.fortuna.ical4j.model.component.VEvent
 import net.fortuna.ical4j.model.property.CalScale
 import net.fortuna.ical4j.model.property.Description
+import net.fortuna.ical4j.model.property.DtEnd
+import net.fortuna.ical4j.model.property.DtStart
 import net.fortuna.ical4j.model.property.ProdId
 import net.fortuna.ical4j.model.property.Version
 import org.bytedream.untis4j.UntisUtils
@@ -28,10 +30,10 @@ fun Timetable.getCalender() : Calendar
         } catch (_ : Exception) { }
         val event = VEvent(
             DateTime(
-                Date.from(lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toLocalDateTime().toInstant(ZoneOffset.UTC))
+                lesson.startTime.atDate(lesson.date).toString()
             ),
             DateTime(
-                Date.from(lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toLocalDateTime().toInstant(ZoneOffset.UTC))
+                lesson.startTime.atDate(lesson.date).toString()
             ),
             name
         )
