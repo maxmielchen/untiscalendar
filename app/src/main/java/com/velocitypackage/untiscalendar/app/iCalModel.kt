@@ -30,10 +30,10 @@ fun Timetable.getCalender() : Calendar
         } catch (_ : Exception) { }
         val event = VEvent(
             DateTime(
-                lesson.startTime.atDate(lesson.date).toString()
+                lesson.startTime.atDate(lesson.date).toInstant(ZoneOffset.of(Config.offset)).toEpochMilli()
             ),
             DateTime(
-                lesson.endTime.atDate(lesson.date).toString()
+                lesson.endTime.atDate(lesson.date).toInstant(ZoneOffset.of(Config.offset)).toEpochMilli()
             ),
             name
         )

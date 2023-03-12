@@ -4,7 +4,7 @@ WORKDIR /app
 RUN mvn clean package
 
 FROM amazoncorretto:17-alpine
-ENV TIMEZONE="Europe/Berlin"
+ENV OFFSET="Z"
 ENV ROOM="Room"
 ENV TEACHER="Teacher"
 ENV SUMMARY="School"
