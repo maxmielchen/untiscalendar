@@ -20,6 +20,7 @@ fun Timetable.getCalender() : Calendar
     calendar.properties.add(ProdId("-//VelocityPackage//UntisCalender 1.0//EN"))
     calendar.properties.add(Version.VERSION_2_0)
     calendar.properties.add(CalScale.GREGORIAN)
+    calendar.components.add(TimeZoneRegistryFactory.getInstance().createRegistry().getTimeZone(Config.timezone).vTimeZone)
     for (lesson in this)
     {
         if (lesson.code == UntisUtils.LessonCode.CANCELLED) continue
@@ -29,12 +30,8 @@ fun Timetable.getCalender() : Calendar
             name = lesson.subjects.longNames[0]
         } catch (_ : Exception) { }
         val event = VEvent(
-            DateTime(
-                lesson.startTime.atDate(lesson.date).toInstant(ZoneOffset.of(Config.offset)).toEpochMilli()
-            ),
-            DateTime(
-                lesson.endTime.atDate(lesson.date).toInstant(ZoneOffset.of(Config.offset)).toEpochMilli()
-            ),
+            Date(Date.from(lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
+            Date(Date.from(lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
             name
         )
         try
