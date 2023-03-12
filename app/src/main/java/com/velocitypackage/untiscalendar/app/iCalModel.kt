@@ -30,8 +30,8 @@ fun Timetable.getCalender() : Calendar
             name = lesson.subjects.longNames[0]
         } catch (_ : Exception) { }
         val event = VEvent(
-            Date(Date.from(lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
-            Date(Date.from(lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
+            DateTime(Date.from(lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
+            DateTime(Date.from(lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).toInstant())),
             name
         )
         try
