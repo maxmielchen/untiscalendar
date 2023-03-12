@@ -8,11 +8,8 @@ import net.fortuna.ical4j.model.property.ProdId
 import net.fortuna.ical4j.model.property.Version
 import org.bytedream.untis4j.UntisUtils
 import org.bytedream.untis4j.responseObjects.Timetable
-import java.time.ZoneId
 import java.time.ZoneOffset
 
-
-var timezone : TimeZone = TimeZoneRegistryFactory.getInstance().createRegistry().getTimeZone(Config.timezone)
 
 fun Timetable.getCalender() : Calendar
 {
@@ -31,12 +28,12 @@ fun Timetable.getCalender() : Calendar
         val event = VEvent(
             DateTime(
                 Date.from(
-                    lesson.startTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameInstant(ZoneOffset.UTC).toInstant()
+                    lesson.startTime.atDate(lesson.date).atOffset(ZoneOffset.of(Config.offset)).toInstant()
                 )
             ),
             DateTime(
                 Date.from(
-                    lesson.endTime.atDate(lesson.date).atZone(ZoneId.of(Config.timezone)).withZoneSameInstant(ZoneOffset.UTC).toInstant()
+                    lesson.startTime.atDate(lesson.date).atOffset(ZoneOffset.of(Config.offset)).toInstant()
                 )
             ),
             name

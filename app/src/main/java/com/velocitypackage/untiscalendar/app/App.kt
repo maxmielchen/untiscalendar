@@ -25,6 +25,7 @@ fun Application.module()
                 HttpStatusCode.Unauthorized,
                 "Wrong access token!"
             )
+            call.response.header("Content-Type", "text/calendar")
             return@get call.respond(HttpStatusCode.OK, getUserSpecificTable().getCalender().toString())
         }
     }
