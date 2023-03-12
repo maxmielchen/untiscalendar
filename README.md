@@ -52,6 +52,8 @@ https://host:port/ical?token=secret
 ```
 
 ## Roadmap
+> 1.1.1 Replace umlaute
+
 > 1.1.0 Fix time change
 
 > 1.0.9 Dynamic Timezone
