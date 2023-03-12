@@ -5,7 +5,7 @@
 ![Downloads](https://img.shields.io/github/downloads/maxmielchen/UntisCalendar/total?style=flat-square)
 
 ## UntisCalendar
-UntisCalendar is a software written in Java that host's your Timetable via iCal.
+UntisCalendar is a software written in Kotlin that host's your Timetable via iCal.
 
 ## Usage
 
