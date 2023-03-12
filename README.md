@@ -33,7 +33,7 @@ Create instance
 ```Bash
 docker pull ghcr.io/maxmielchen/untiscalendar:latest
 docker run \
-    -e TIMEZONE="Germany/Berlin" \
+    -e TIMEZONE="Europe/Berlin" \
     -e ROOM=Room \
     -e TEACHER=Teacher \
     -e SUMMARY=School \
@@ -52,6 +52,8 @@ https://host:port/ical?token=secret
 ```
 
 ## Roadmap
+> 1.1.0 Fix time change
+
 > 1.0.9 Dynamic Timezone
 
 > 1.0.8 Set Timezone priority
