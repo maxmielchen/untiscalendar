@@ -47,7 +47,7 @@ docker run \
 3. Try it
 Enter the link below in a search engine and if a file is now downloaded then you have done everything correctly.
 
-https://HOST:80/ical?token=SECRET
+http://HOST:80/ical?token=SECRET
 
 ## Usage
 
