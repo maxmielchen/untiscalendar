@@ -5,18 +5,17 @@
 
 # UntisCalendar 📆
 
-UntisCalendar is a software written in Kotlin that serves as a host for your Untis Timetable via iCal. With UntisCalendar, you can easily access your timetable from any device that supports iCal. 
+UntisCalendar is a software written in Kotlin that serves as a host for your Untis Timetable via iCal. With UntisCalendar, you can easily access your timetable from any device or service that supports iCal. 
 
 ## Features
 
-✅ Sync your Untis timetable with iCal, Google Calendar or Microsoft Outlook\
-✅ View your timetable on any device or service that supports iCal\
-✅ Easy to setup
+✅ Sync your Untis timetable with **iCal**, **Google Calendar** or **Microsoft Outlook**\
+✅ View your timetable on any device or service that supports iCal
 
 ## Requirements
 
 - 2GB RAM 
-- Preinstalled Docker
+- Preinstalled **Docker**
 
 ## Installation
 
