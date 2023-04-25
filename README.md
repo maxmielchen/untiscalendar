@@ -49,9 +49,19 @@ Enter the link below in a search engine and if a file is now downloaded then you
 
 http://HOST:80/ical?token=SECRET
 
+And now you can take this link and embed it in Google calendar or Microsoft Outlook.
+
 ## Usage
 
-To use UntisCalendar, simply navigate to the web address where the server is running and log in with your Untis account credentials. Your timetable will automatically sync with iCal, and you can view it on any device that supports iCal.
+1. Prepare your link:
+http://HOST:80/ical?token=SECRET
+
+2. Add calendar to your existing calendar
+Here are a few articles that will show you how to add the calendar you've just created to your existing calendar
+- [Google Calendar](https://support.google.com/calendar/answer/37100)
+    > You have to go down to "Use a link to add a public calendar"
+- [Microsoft Outlook](https://support.microsoft.com/en-us/office/import-calendars-into-outlook-8e8364e1-400e-4c0f-a573-fe76b5a2d379)
+    > You have to go down to "Add internet calendars"
 
 ## Contributing
 
