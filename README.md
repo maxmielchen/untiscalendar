@@ -2,36 +2,33 @@
 ![](https://img.shields.io/github/repo-size/maxmielchen/UntisCalendar?style=flat-square)
 ![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalendar/docker-image.yml?style=flat-square)
 ![](https://img.shields.io/github/actions/workflow/status/maxmielchen/UntisCalendar/docker-publish.yml?label=publish&style=flat-square)
-![Downloads](https://img.shields.io/github/downloads/maxmielchen/UntisCalendar/total?style=flat-square)
 
-## UntisCalendar
-UntisCalendar is a software written in Kotlin that host's your Timetable via iCal.
+# UntisCalendar 📆
 
-## Usage
+UntisCalendar is a software written in Kotlin that serves as a host for your Untis Timetable via iCal. With UntisCalendar, you can easily access your timetable from any device or service that supports iCal. 
 
-Install Docker on Ubuntu
-```Bash
-sudo apt-get remove docker docker-engine docker.io containerd runc
-sudo apt-get update
-sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
-sudo mkdir -m 0755 -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+## Features
+
+✅ Sync your Untis timetable with **iCal**, **Google Calendar** or **Microsoft Outlook**\
+✅ View your timetable on any device or service that supports iCal
+
+## Requirements
+
+- 2GB RAM 
+- Preinstalled **Docker**
+
+## Installation
+
+To install UntisCalendar, follow these simple steps:
+
+1. Pull image:
+```bash
+docker pull ghcr.io/maxmielchen/untiscalendar:latest && \
+docker tag ghcr.io/maxmielchen/untiscalendar:latest untiscalendar:latest
 ```
 
-
-
-Create instance
+2. Start server:
 ```Bash
-docker pull ghcr.io/maxmielchen/untiscalendar:latest
 docker run \
     -e TIMEZONE="Europe/Berlin" \
     -e ROOM=Room \
@@ -43,36 +40,34 @@ docker run \
     -e SCHOOL=your_school \
     -e TOKEN=secret \
     -p 80:8080 \
-    ghcr.io/maxmielchen/untiscalendar:latest
+    untiscalendar:latest
 ```
+> The variables 'ROOM', 'TEACHER' and 'SUMMARY' are there if you want them in another language, because then they will be translated into the language or word you specify!!!
 
-iCal Link
-```http
-https://host:port/ical?token=secret
-```
+3. Try it
+Enter the link below in a search engine and if a file is now downloaded then you have done everything correctly.
 
-## Roadmap
-> 1.1.1 Replace umlaute
+http://HOST:80/ical?token=SECRET
 
-> 1.1.0 Fix time change
+And now you can take this link and embed it in Google calendar or Microsoft Outlook.
 
-> 1.0.9 Dynamic Timezone
+## Usage
 
-> 1.0.8 Set Timezone priority
+1. Prepare your link:
+http://HOST:80/ical?token=SECRET
 
-> 1.0.7 Fix security issues
+2. Add calendar to your existing calendar
+Here are a few articles that will show you how to add the calendar you've just created to your existing calendar
+- [Google Calendar](https://support.google.com/calendar/answer/37100)
+    > You have to go down to "Use a link to add a public calendar"
+- [Microsoft Outlook](https://support.microsoft.com/en-us/office/import-calendars-into-outlook-8e8364e1-400e-4c0f-a573-fe76b5a2d379)
+    > You have to go down to "Add internet calendars"
 
-> 1.0.6 Rename
+## Contributing
 
-> 1.0.5 Rename
+If you would like to contribute to UntisCalendar, please fork the repository and submit a pull request with your changes. We welcome all contributions!
 
-> 1.0.4 Set Europe/Berlin as default Timezone
+## License
 
-> 1.0.3 Add option to change Timezone
-
-> 1.0.2 Fix token bug
-
-> 1.0.1 Save version, with some security settings and env variables
-
-> 1.0.0 Unsafe version, but already working
+This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for more information.
 
