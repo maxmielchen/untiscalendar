@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.velocitypackage.untiscalendar</groupId>
+    <groupId>io.mielchen.max.untiscalendar</groupId>
     <artifactId>app</artifactId>
     <version>1.0</version>
 
     <properties>
         <kotlin.version>1.8.10</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -32,43 +32,43 @@
         <dependency>
             <groupId>com.github.untisapi</groupId>
             <artifactId>untis4j</artifactId>
-            <version>v1.3.4</version>
+            <version>v1.3.5</version>
         </dependency>
         <dependency>
             <groupId>org.mnode.ical4j</groupId>
             <artifactId>ical4j</artifactId>
-            <version>3.2.10</version>
+            <version>3.2.16</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.21</version>
+            <version>1.7.36</version>
         </dependency>
 
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-server-core-jvm</artifactId>
-            <version>2.2.3</version>
+            <version>2.3.9</version>
         </dependency>
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-server-netty-jvm</artifactId>
-            <version>2.2.3</version>
+            <version>2.3.9</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.5</version>
+            <version>1.5.3</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>2.0.6</version>
+            <version>2.0.12</version>
         </dependency>
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-server-call-logging-jvm</artifactId>
-            <version>2.2.3</version>
+            <version>2.3.9</version>
         </dependency>
     </dependencies>
 
@@ -107,7 +107,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.12.1</version>
                 <executions>
                     <!-- Replacing default-compile as it is treated specially by maven -->
                     <execution>
@@ -147,7 +147,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.velocitypackage.untiscalendar.app.AppKt</mainClass>
+                                    <mainClass>io.mielchen.max.untiscalendar.app.AppKt</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
