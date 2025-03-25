@@ -42,6 +42,7 @@ fun Timetable.getCalender() : Calendar
 }
 
 fun String.replaceUmlaute(): String {
+    /**
     val umlauteMap = mapOf(
         "ä" to "ae",
         "ö" to "oe",
@@ -55,4 +56,6 @@ fun String.replaceUmlaute(): String {
         outputString = outputString.replace(umlaut, replacement)
     }
     return outputString
+    **/
+    return this
 }
